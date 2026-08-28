@@ -1,10 +1,11 @@
 id: hermes
+schema_version: 1
 display_name: Hermes
 icon_url: https://registry.npmmirror.com/@lobehub/icons-static-avatar/latest/files/avatars/hermesagent.webp
 icon_svg_url: https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/hermesagent.svg
 description: Automates Hermes desktop sessions so Prism can remote-browse conversations and continue them from mobile or glasses.
 version: 0.1.12
-protocol_version: "4"
+plugin_protocol_version: "4"
 min_hub_version: 0.1.0
 integration_mode: protocol-native
 transport: process
