@@ -1,0 +1,55 @@
+id: hermes
+schema_version: 1
+display_name: Hermes
+icon_url: https://registry.npmmirror.com/@lobehub/icons-static-avatar/latest/files/avatars/hermesagent.webp
+icon_svg_url: https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/hermesagent.svg
+description: Automates Hermes desktop sessions so Prism can remote-browse conversations and continue them from mobile or glasses.
+version: 0.1.12
+plugin_protocol_version: "4"
+min_hub_version: 0.1.0
+integration_mode: protocol-native
+transport: process
+mode: gateway
+runtime_modes: [desktop, native]
+default_runtime_mode: desktop
+managed_terminal_modes: [native]
+runtime_controls:
+  desktop:
+    model: stable
+    reasoning: stable
+  native:
+    model: stable
+    reasoning: stable
+runtime_operations:
+  desktop:
+    rename: direct
+    pin: direct
+    archive: direct
+    delete: direct
+  native:
+    rename: unsupported
+    pin: unsupported
+    archive: unsupported
+    delete: unsupported
+managed_launch: true
+runtime_dependencies:
+  node: ">=22.0.0 <23.0.0"
+command: ["${runtime.node}", "index.js"]
+capabilities:
+  native_visible_input: true
+  native_visible_output: true
+  can_attach_session: true
+  can_start_session_with_message: true
+  can_open_draft: true
+  can_list_sessions: true
+  can_read_history: true
+  can_interrupt: true
+  can_approval: true
+  can_forward_sync: true
+  can_reverse_sync: true
+  # Each runtime advertises its verified watcher capability at probe time.
+  can_plugin_wide_watch: false
+  can_wait_run: true
+  can_read_status: true
+  can_control_session: true
+  can_open_managed_terminal: true
