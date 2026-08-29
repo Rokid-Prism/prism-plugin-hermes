@@ -85,6 +85,7 @@ test("managed TUI launch only injects the loopback relay URL into Terminal", () 
     bin: "/Users/test/.local/bin/hermes",
     cwd: "/private/tmp/prism-hermes-native-e2e",
     wsUrl: "ws://127.0.0.1:32123/prism/hermes/tui?token=secret-token",
+    platform: "darwin",
     spawnImpl: (...args) => {
       spawnCall = args;
       return child;
