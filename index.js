@@ -36,7 +36,7 @@ const {
 const { isHermesInternalHistoryRow } = require("./hermes_history");
 const { nativeApprovalID } = require("./hermes_approval");
 
-const pluginBridge = require("@rokid/pluginbridge-plugin-sdk");
+const pluginBridge = require("@rokid-prism/pluginbridge-plugin-sdk");
 
 const execFileAsync = promisify(execFile);
 

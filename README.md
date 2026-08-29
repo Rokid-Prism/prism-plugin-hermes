@@ -24,7 +24,7 @@ transport、审批、队列或前台状态。任何 Gateway token 都不写入 P
 和 `detail_snapshot` 都使用标准字段。Hermes 未稳定提供的能力返回空
 option 列表或 `null`，Mobile/Panel 不读取 Hermes 私有字段。
 
-PluginBridge 使用公开 npm 包 `@rokid/pluginbridge-plugin-sdk` 的
+PluginBridge 使用公开 npm 包 `@rokid-prism/pluginbridge-plugin-sdk` 的
 `serve(adapter)`，并由 Hub 注入共享 Node 22 runtime；不再在 Prism Desktop
 应用包中寻找 SDK，也不再各自实现 stdio wire、订阅取消和事件转发。Hermes 自身的 SDK 是仓库私有的
 `@hermes/shared` TypeScript workspace package，并未发布为可安装的多语言
